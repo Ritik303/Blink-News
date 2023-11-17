@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import FetchData from "./components/FetchData";
 const App=()=>{
   return(
   <>
@@ -16,13 +17,13 @@ const App=()=>{
   <Navbar/>
     <Routes>
       <Route exact path="/" element={<Home/>}/>
-      <Route path="/general" element={<Categories cat="general"/>}/>
-      <Route path="/business" element={<Categories cat="business"/>}/>
-      <Route path="/entertainment" element={<Categories cat="entertainment"/>}/>
-      <Route path="/health" element={<Categories cat="health"/>}/>
-      <Route path="/science" element={<Categories cat="science"/>}/>
-      <Route path="/sports" element={<Categories cat="sports"/>}/>
-      <Route path="/technology" element={<Categories cat="technology"/>}/>
+      <Route path="/general" element={<FetchData cat="general"/>}/>
+      <Route path="/business" element={<FetchData cat="business"/>}/>
+      <Route path="/entertainment" element={<FetchData cat="entertainment"/>}/>
+      <Route path="/health" element={<FetchData cat="health"/>}/>
+      <Route path="/science" element={<FetchData cat="science"/>}/>
+      <Route path="/sports" element={<FetchData cat="sports"/>}/>
+      <Route path="/technology" element={<FetchData cat="technology"/>}/>
     </Routes>
     <Footer/>
   </Router>

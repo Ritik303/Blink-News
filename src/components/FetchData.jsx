@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
 import { Link } from "react-router-dom";
-const FetchData=()=>{
+const FetchData=({cat})=>{
     const[Data,setData]= useState("");
     const fetchData=async()=>{
         await axios.get(
-            "https://newsapi.org/v2/top-headlines?country=in&apiKey=b4561c3900844539ba95c65d8d2b991f"
+            cat?
+            `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=b4561c3900844539ba95c65d8d2b991f`
+            : "https://newsapi.org/v2/top-headlines?country=in&apiKey=b4561c3900844539ba95c65d8d2b991f"
             ).then((res)=>setData(res.data.articles));
     };
     useEffect(() =>{
         fetchData();
-    },[])
+    },[cat])
     return (
     <div className="container my-4 " ><u><h3>TOP HEADLINES</h3></u>
     <div className="conatiner my-3 d-flex justify-content-center align-items-center flex-column">{Data ? Data.map((items,index)=>
