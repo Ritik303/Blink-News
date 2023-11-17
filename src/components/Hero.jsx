@@ -11,38 +11,32 @@ const Hero=()=>{
     useEffect(() =>{
         fetchData();
     },[])
-    // return <div className="container-fluid bg-dark text-white d-flex justify-content-center align-items-center flex-column" style={{height:"50vh"}}><h1 style={{fontSize:"50px", color:"orangered"}}>BLINK News</h1>
-    // {/* <h5>THIS WEBSITE IS BUILT BY THE HELP OF NEWS API.</h5> */}
-    // </div>;
     return(
         <MDBCarousel showControls showIndicators>
-            {/* {dt ? dt.map((items,index)=>( */}
-            <>
+            <div className=".text-dark">
  <MDBCarouselItem itemId={1}>
-        <img src='https://mdbootstrap.com/img/new/slides/042.jpg' className='d-block w-100' alt='...' />
+        <img src='p2.jpg' className='d-block w-100 'alt='...' />
         <MDBCarouselCaption>
-          <h5>fuck you</h5>
-          <p>items.description</p>
+          <h5 ><b>"Welcome to Blink News: Your Gateway to Informed Living"</b></h5>
+          <p>Welcome to Blink News, where information meets inspiration. Explore the world's latest stories, tailored just for you. Let Blink News be your trusted companion in the journey of staying informed and inspired.</p>
         </MDBCarouselCaption>
       </MDBCarouselItem> 
        <MDBCarouselItem itemId={2}>
-        <img src='https://mdbootstrap.com/img/new/slides/042.jpg' className='d-block w-100' alt='...' />
+        <img src='p1.jpg' className='d-block w-100' alt='...' />
 
         <MDBCarouselCaption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5><b>"Unveiling the Blink News Story"</b></h5>
+          <p>At Blink News, we believe in the power of knowledge and the thrill of discovery. Learn about our mission, the team behind Blink Bot, and the passion that drives us to redefine how you experience and engage with news.</p>
         </MDBCarouselCaption>
       </MDBCarouselItem>
       <MDBCarouselItem itemId={3}>
-        <img src='https://mdbootstrap.com/img/new/slides/043.jpg' className='d-block w-100' alt='...' />
+        <img src='p3.jpg' className='d-block w-100' alt='...' />
         <MDBCarouselCaption>
-          <h5>Third slide label</h5>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h5 ><b>"Discover the Features that Make Blink News Shine"</b></h5>
+          <p>Dive into the extraordinary features that set Blink News apart. From personalized news feeds and real-time updates to interactive conversations with Blink Bot, explore how Blink News transforms news consumption into a dynamic experience.</p>
         </MDBCarouselCaption>
       </MDBCarouselItem> 
-  </>
-            
- {/* ):"LOADING...."}  */}
+  </div>
     </MDBCarousel>
         
     )
